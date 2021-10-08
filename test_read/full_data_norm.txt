@@ -1,0 +1,12 @@
+y_func: (x+y)**2
+x0: 0
+y0: 0
+diff_eq_a: 0
+diff_eq_b: 0.5
+diff_eq_h1: 0.1
+diff_eq_h2: 0.05
+
+y_sol: tan(x)-x
+sol_a: 0
+sol_b: 0.5
+sol_h: 0.01

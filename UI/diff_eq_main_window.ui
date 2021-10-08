@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1317</width>
+    <height>937</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1317</width>
+    <height>937</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1317</width>
+    <height>937</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>650</y>
+      <width>1301</width>
+      <height>246</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Шаг h1</string>
+     </attribute>
+     <layout class="QHBoxLayout" name="horizontalLayout_10">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="8,3">
+        <item>
+         <widget class="QTableView" name="h1_tableView"/>
+        </item>
+        <item>
+         <widget class="QTableView" name="h1_result_tableView"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Шаг h2</string>
+     </attribute>
+     <layout class="QHBoxLayout" name="horizontalLayout_19">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="8,3">
+        <item>
+         <widget class="QTableView" name="h2_tableView"/>
+        </item>
+        <item>
+         <widget class="QTableView" name="h2_result_tableView"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>200</y>
+      <width>451</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="2,7">
+     <item>
+      <widget class="QCheckBox" name="use_actual_solution_checkBox">
+       <property name="text">
+        <string>Точное решение</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>y = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="diff_eq_solution_line_edit">
+           <property name="text">
+            <string>tan(x)-x</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <property name="spacing">
+          <number>7</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>a</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="solution_a_le">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>b</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="solution_b_le">
+             <property name="text">
+              <string>0.5</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>h</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="solution_h_le">
+             <property name="text">
+              <string>0.01</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="check_settings_btn">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>120</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Подтвердить значения</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>821</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="plot_layout">
+     <item>
+      <widget class="QWidget" name="plot_widget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>400</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>310</y>
+      <width>211</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>20</number>
+     </property>
+     <property name="leftMargin">
+      <number>1</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="clear_canvas_btn">
+       <property name="text">
+        <string>Очистить коорд. плоскость</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clear_tables_btn">
+       <property name="text">
+        <string>Очистить таблицы</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clear_all_btn">
+       <property name="text">
+        <string>Очистить всё</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="back_btn">
+       <property name="text">
+        <string>Назад в меню</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="save_res_h2_btn">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>640</y>
+      <width>191</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить результат для h2</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>300</y>
+      <width>211</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>7</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="actual_solution_btn">
+       <property name="text">
+        <string>График точного решения</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Eulers_method_btn">
+       <property name="text">
+        <string>Метод Эйлера</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Eulers_Cauchy_method_btn">
+       <property name="text">
+        <string>Метод Эйлера-Коши</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="midpoint_method_btn">
+       <property name="text">
+        <string>Метод средней точки</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Runge_Kutta_method_btn">
+       <property name="text">
+        <string>Метод Рунге-Кутты</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="save_all_h2_btn">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>640</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить расчёты для h2</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>50</y>
+      <width>261</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>y' = </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="diff_eq_func_line_edit">
+         <property name="text">
+          <string>(x+y)**2</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <property name="spacing">
+            <number>7</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="x0_label">
+             <property name="text">
+              <string>x0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="x0_le">
+             <property name="text">
+              <string>0</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="y0_label">
+               <property name="text">
+                <string>y0</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="y0_le">
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="diff_eq_a_label">
+             <property name="text">
+              <string> a</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="diff_eq_a_le">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="diff_eq_b_label">
+               <property name="text">
+                <string> b</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="diff_eq_b_le">
+               <property name="text">
+                <string>0,5</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="diff_eq_h1_label">
+           <property name="text">
+            <string>h1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="diff_eq_h1_le">
+           <property name="text">
+            <string>0.1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="diff_eq_h2_label">
+             <property name="text">
+              <string>h2</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="diff_eq_h2_le">
+             <property name="text">
+              <string>0.05</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="save_all_h1_btn">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>600</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить расчёты для h1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_res_h1_btn">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>600</y>
+      <width>191</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить результат для h1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="upload_data_from_file_btn">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>50</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Загрузить данные
+из файла</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1317</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Сохранить</string>
+    </property>
+    <addaction name="save_all_h1_action"/>
+    <addaction name="save_all_h2_action"/>
+    <addaction name="separator"/>
+    <addaction name="save_res_h1_action"/>
+    <addaction name="save_res_h2_action"/>
+   </widget>
+   <widget class="QMenu" name="open_menu">
+    <property name="title">
+     <string>Открыть</string>
+    </property>
+    <addaction name="open_file_action"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="open_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="save_all_h1_action">
+   <property name="text">
+    <string>Сохранить расчёты для h1</string>
+   </property>
+  </action>
+  <action name="save_all_h2_action">
+   <property name="text">
+    <string>Сохранить расчёты для h2</string>
+   </property>
+  </action>
+  <action name="save_res_h1_action">
+   <property name="text">
+    <string>Сохранить результат для h1</string>
+   </property>
+  </action>
+  <action name="save_res_h2_action">
+   <property name="text">
+    <string>Сохранить результат для h2</string>
+   </property>
+  </action>
+  <action name="open_file_action">
+   <property name="text">
+    <string>Открыть файл с данными</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

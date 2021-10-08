@@ -1,0 +1,12 @@
+y_func: test_y'
+x0: 3
+y0: 4
+diff_eq_a: 5
+diff_eq_b: 6
+diff_eq_h1: 7
+diff_eq_h2: 8
+
+y_sol: y_sol
+sol_a: 9
+sol_b: 10
+sol_h: 11
