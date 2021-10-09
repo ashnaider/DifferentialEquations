@@ -2,6 +2,13 @@
 Numerical solutions of differential equations: Eulers, Euler-Cauchy, Runge-Kutta, midpoint method
 
 
+
+## Screenshots
+
+### Differential equations window
+![main screen](img/diff_eq_window.png)
+
+
 ## PyQt5 installation
 ```
 pip3 install --user pyqt5  
