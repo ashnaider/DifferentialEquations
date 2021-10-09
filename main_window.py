@@ -1,6 +1,8 @@
 from PyQt5 import QtCore, QtWidgets, uic
 
-main_window_ui = 'UI\main_window.ui'
+from Utils.os_checker import *
+
+main_window_ui = f'UI{SLASH}main_window.ui'
 form, base = uic.loadUiType(uifile=main_window_ui)
 
 class MainWindow(base, form):

@@ -21,8 +21,9 @@ from Algo.DiffEq.midpoint_method import *
 from Utils.dataframe_model import DataFrameModel
 from Utils.files import *
 from Utils.string_parser import *
+from Utils.os_checker import *
 
-diff_eq_window = 'UI\diff_eq_main_window.ui'
+diff_eq_window = f'UI{SLASH}diff_eq_main_window.ui'
 form, base = uic.loadUiType(uifile=diff_eq_window)
 
 class DiffEqWindow(base, form):
